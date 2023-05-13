@@ -1,6 +1,11 @@
-# Getting Started
+# TODO, use this as place to put common issues or notes
 
-### Reference Documentation
+
+
+## Useful Links
+
+
+## Spring Reference Documentation
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
@@ -8,10 +13,15 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.0.6/maven-plugin/reference/html/#build-image)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/3.0.6/reference/htmlsingle/#web)
 
-### Guides
+
+
+## Guides
 The following guides illustrate how to use some features concretely:
 
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+* https://www.knowledgehut.com/blog/devops/install-kubernetes-on-windows
+* https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
+* https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 
