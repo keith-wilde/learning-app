@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: learning-app
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /actuator/health
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: learning-app
+                port:
+                  number: 8080
