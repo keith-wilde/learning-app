@@ -1,14 +1,11 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: v1
+kind: Pod
 metadata:
   name: learning-app
 spec:
-  template:
-    metadata:
-      name: learning-app-pod
-    spec:
-      containers:
-        - name: learning-app
-          image: keithw453/learning-app
-          imagePullPolicy: IfNotPresent
-      restartPolicy: Never
+  containers:
+    - name: learning-app
+      image: keithw453/learning-app:0.0.1
+      imagePullPolicy: IfNotPresent
+  imagePullSecrets:
+    - name: regcred
