@@ -2,7 +2,7 @@
 echo "----Configuring Kubernetes admin console----"
 
 echo "----Applying recommended.yml----"
-kubectl apply -f ../kubernetes/recommended.yml
+kubectl apply -f ../kubernetes/admin-console-setup.yml
 
 echo "----Setup admin user----"
 kubectl apply -f ../kubernetes/admin-user-setup.yml

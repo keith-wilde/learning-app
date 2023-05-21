@@ -6,7 +6,8 @@
 - to get token run create-secret.sh (creates out.txt file)
 
 
-## 
+## Useful comands
+kubectl apply -f *.yml
 
 
 #
