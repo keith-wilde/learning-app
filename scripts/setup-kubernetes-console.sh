@@ -1,8 +1,6 @@
 #!/bin/bash
 echo "----Configuring Kubernetes admin console----"
-
-echo "----Applying recommended.yml----"
-kubectl apply -f ../kubernetes/admin-console-setup.yml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
 
 echo "----Setup admin user----"
 kubectl apply -f ../kubernetes/admin-user-setup.yml
