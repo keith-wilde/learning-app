@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learning-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learning-app
+  template:
+    metadata:
+      labels:
+        app: learning-app
+    spec:
+      containers:
+        - name: learning-app
+          image: keithw453/learning-app:0.0.1
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '500m'
+            limits:
+              memory: '512Mi'
+              cpu: '1'
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 15
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 3
+      imagePullSecrets:
+        - name: regcred
