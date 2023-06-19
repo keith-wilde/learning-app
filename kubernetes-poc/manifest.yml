@@ -9,4 +9,3 @@
 #      imagePullPolicy: IfNotPresent
 #  imagePullSecrets:
 #    - name: regcred
-#TODO use deployment instead?
