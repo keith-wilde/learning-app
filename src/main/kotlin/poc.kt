@@ -1,15 +1,18 @@
-data class Person(
-    val name: String,
-    val age: Int? = 680
-)
+package strings
+fun String.lastChar(): Char = this[this.length-2]
 
+fun main() {
+    println("things".lastChar())
+    println(View().click())
+    println(Button().click())
+}
 
-// fun findAlice() = findPerson { it.name == "alice"}
-// fun findGregor() = findPerson { it.name == "gregor"}
+open class View {
+    open fun click() = "clicking"
+}
+class Button:View() {
+    override fun click(): String {
+        return "${super.click()} overridden stuff"
+    }
 
-
-fun main(args: Array<String>) {
-    val persons = listOf(Person("alice"), Person("gregor", 413))
-    val oldest = persons.maxBy { it.age ?: 0 }
-    print(oldest)
 }
